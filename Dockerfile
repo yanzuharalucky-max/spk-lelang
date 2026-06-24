@@ -1,11 +1,14 @@
-FROM php:8.2-apache
+FROM php:8.2-cli
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-COPY . /var/www/html/
+WORKDIR /app
 
-RUN mkdir -p /var/www/html/tmp_sessions \
-    && chmod -R 777 /var/www/html/tmp_sessions \
-    && chmod -R 777 /var/www/html/assets/uploads
+COPY . /app
 
-EXPOSE 80
+RUN mkdir -p /app/tmp_sessions /app/assets/uploads \
+    && chmod -R 777 /app/tmp_sessions /app/assets/uploads
+
+EXPOSE 8080
+
+CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-8080} -t /app"]
