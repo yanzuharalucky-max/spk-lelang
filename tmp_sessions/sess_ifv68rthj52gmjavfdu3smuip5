@@ -1,0 +1,1 @@
+user|a:11:{s:2:"id";i:16;s:4:"name";s:3:"leo";s:5:"email";s:13:"leo@gmail.com";s:8:"password";s:60:"$2y$10$KpOOhXtLErtIL0NvJwb9m.OlL7pa0QxxoksKqLiLeTeROwHVxcWmy";s:4:"role";s:5:"buyer";s:10:"subscribed";i:1;s:10:"created_at";s:19:"2026-04-08 17:30:55";s:12:"subscription";s:7:"premium";s:12:"rating_buyer";s:4:"4.00";s:14:"response_score";s:4:"4.00";s:19:"transaction_history";i:1;}
