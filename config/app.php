@@ -1,7 +1,12 @@
 <?php
 
 define('APP_NAME', 'Seleno Lelang');
-define('BASE_URL', '/SPK_lelang');
+
+if (isset($_SERVER['HTTP_HOST']) && strpos($_SERVER['HTTP_HOST'], 'railway.app') !== false) {
+    define('BASE_URL', '');
+} else {
+    define('BASE_URL', '/SPK_lelang');
+}
 
 define('MAIL_FROM_EMAIL', 'no-reply@seleno-lelang.local');
 define('MAIL_FROM_NAME', 'Seleno Lelang');
